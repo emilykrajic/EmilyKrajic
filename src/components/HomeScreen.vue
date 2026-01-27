@@ -39,7 +39,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   width: 100%;
   min-height: 30vh;
   max-height: 350px;
-  background-color: #fcf0f4;
+  background-color: #fceaf0;
 
   display: flex;
   flex-direction: column;
