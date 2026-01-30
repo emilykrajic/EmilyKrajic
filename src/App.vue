@@ -2,8 +2,11 @@
   <div id="app">
     <header class="header">
       <!-- Mobile / Small screen -->
+
       <template v-if="isMobile">
+        <h1 class="page-title">{{ pageTitle }}</h1>
         <!-- Hamburger button -->
+
         <button class="hamburger" @click="drawerOpen = true">☰</button>
 
         <!-- Custom drawer -->
@@ -17,6 +20,9 @@
             >
               {{ tab.label }}
             </button>
+          </div>
+          <div class="drawer-footer">
+            <img :src="DrawerPic" alt="Drawer Pic" class="DrawerPic" />
           </div>
         </div>
 
@@ -51,7 +57,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import DrawerPic from '@/assets/Drawer.png';
+
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
@@ -68,6 +76,9 @@ const tabs = [
 const drawerOpen = ref(false);
 const isMobile = ref(false);
 
+const pageTitle = computed(() => {
+  return router.currentRoute.value.meta.title || '';
+});
 function goTo(name) {
   if (route.name !== name) {
     router.push({ name });
@@ -79,7 +90,6 @@ function navigate(name) {
   drawerOpen.value = false;
 }
 
-// screen size detection
 function checkScreen() {
   isMobile.value = window.innerWidth <= 900;
 }
@@ -102,62 +112,74 @@ onUnmounted(() => {
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background-color: #fceaf0;
+  background-color: #fff7fa;
   display: flex;
   flex-direction: column;
+}
+.DrawerPic {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+.drawer-footer {
+  margin-top: auto;
+  padding-left: 3rem;
+  text-align: center;
+}
+.page-title {
+  font-family: 'Bilbo Swash Caps', cursive;
+  position: absolute;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #ef91b5;
+  pointer-events: none;
+  font-weight: normal;
 }
 
 /* ------------------------------
    Header & Tabs
 ------------------------------- */
 .header {
+  position: relative;
+  align-items: center;
   background-color: #fceaf0;
+  align-items: center;
+}
+
+.tab-bar {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* ------------------------------
-   Desktop Tabs (match drawer style)
-------------------------------- */
-/* ------------------------------
-   Horizontal Desktop Tabs
-------------------------------- */
-.tab-bar {
-  display: flex; /* horizontal layout */
-  justify-content: center; /* center tabs in header */
-  gap: 0.5rem; /* spacing between tabs */
-  background-color: #fceaf0; /* same as header */
+  background-color: #fceaf0;
   padding: 0.5rem 1rem;
 }
-
-/* Individual tab */
 .tab {
   font-family: 'DM Serif Text';
   font-weight: bold;
   font-size: 1rem;
-  padding: 0.75rem 4rem; /* adjust vertical/horizontal padding for horizontal layout */
-  text-align: center; /* center text horizontally */
+  padding: 0.75rem 4rem;
+  text-align: center;
   color: #fbd3e1;
   background: none;
   border: none;
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s;
-  border-radius: 4px; /* optional: rounded corners like buttons */
+  border-radius: 4px;
 }
 
 .tab:hover {
   background-color: #fceaf0;
-  color: #f64187;
+  color: #ef91b5;
 }
 
 .tab.active {
-  color: #f64187;
+  color: #ef91b5;
   background-color: #fceaf0;
 }
 
@@ -165,14 +187,19 @@ onUnmounted(() => {
    Drawer
 ------------------------------- */
 /* Hamburger */
-.hamburger {
-  top: 0.5rem;
+
+button.hamburger {
+  position: relative;
   left: 0.5rem;
   font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: #f64187;
+  color: #ef91b5;
+}
+.hamburger {
+  position: fixed;
+  color: #ef91b5;
 }
 
 /* Custom drawer */
@@ -214,7 +241,7 @@ onUnmounted(() => {
   font-family: 'DM Serif Text';
   font-weight: bold;
   font-size: 1.1rem;
-  color: #f64187;
+  color: #ef91b5;
   border-bottom: 1px solid #fbd3e1;
 }
 
@@ -228,8 +255,8 @@ onUnmounted(() => {
 .drawer-tab {
   font-family: 'DM Serif Text';
   font-weight: bold;
-  font-size: 1rem;
-  padding: 2rem 0rem;
+  font-size: 1.3rem;
+  padding: 3rem 0rem;
   text-align: left;
   color: #fbd3e1;
   background: none;
@@ -240,11 +267,11 @@ onUnmounted(() => {
 
 .drawer-tab:hover {
   background-color: #fceaf0;
-  color: #f64187;
+  color: #ef91b5;
 }
 
 .drawer-tab.active {
-  color: #f64187;
+  color: #ef91b5;
   background-color: #fceaf0;
 }
 /* ------------------------------
@@ -264,8 +291,6 @@ footer.footer {
   .header {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.25rem 0.5rem;
   }
 
   wa-tab {

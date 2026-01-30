@@ -50,7 +50,7 @@ import resume from '@/assets/resume.png';
   object-fit: cover;
   border-radius: 0;
   padding: 0;
-  border: 5px solid #f64187;
+  border: 5px solid #ef91b5;
 }
 
 /* ------------------------------

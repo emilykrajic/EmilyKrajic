@@ -64,7 +64,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   border-radius: 0;
-  border: 5px solid #f64187;
+  border: 5px solid #ef91b5;
 }
 
 .images img {
@@ -102,7 +102,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
   gap: 0;
-  border: 5px solid #f64187;
+  border: 5px solid #ef91b5;
 }
 
 .grid img {

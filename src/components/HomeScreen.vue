@@ -1,5 +1,6 @@
 <template>
   <!-- Hero / Featured Image -->
+
   <img :src="HeadShot" alt="HeadShot" class="image" />
 
   <!-- Profile rectangle -->
@@ -23,6 +24,7 @@ import HeadShot2 from '@/assets/Glacier.png';
 /* ------------------------------
    Hero Image
 ------------------------------- */
+
 .image {
   width: 100%;
   height: 50vh;
@@ -39,7 +41,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   width: 100%;
   min-height: 30vh;
   max-height: 350px;
-  background-color: #fceaf0;
+  background-color: #fff7fa;
 
   display: flex;
   flex-direction: column;

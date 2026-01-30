@@ -12,33 +12,32 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeScreen,
+    meta: { title: 'Home' }
   },
   {
     path: '/resume',
     name: 'resume',
     component: Resume,
+    meta: { title: 'Resume' }
   },
   {
     path: '/art',
     name: 'art',
     component: ArtWork,
+    meta: { title: 'Studio Art' }
   },
   {
     path: '/side',
     name: 'side',
     component: SideProject,
-  },
-  {
-    path: '/homescreen',
-    name: 'homescreen',
-    component: HomeScreen,
+    meta: { title: 'Upcycling Projects' }
   },
   {
     path: '/about',
     name: 'about',
     component: About,
-  },
-  
+    meta: { title: 'About Me' }
+  }
 ]
 
 const router = createRouter({
