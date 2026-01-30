@@ -116,12 +116,15 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
 }
+.content {
+  flex: 1;
+}
 .DrawerPic {
   position: relative;
   width: 100%;
   height: auto;
   object-fit: contain;
-  margin: 0 auto;
+  margin: auto;
   display: block;
 }
 .drawer-footer {

@@ -3,17 +3,20 @@
   <!-- Class One -->
   <div class="gallery">
     <!-- Top main image -->
-    <div class="grid">
+    <div class="rectangle">
+      <p class="textCenter">Coming Soon!</p>
+    </div>
+    <!-- <div class="grid">
       <img
         v-for="i in 4"
         :key="i"
         :src="i % 2 === 0 ? HeadShot2 : HeadShot"
         :alt="'HeadShot ' + i"
       />
-    </div>
+    </div> -->
     <div class="text">
-      <p class="tabbed">Drawing</p>
-      <p class="tabbed">
+      <p class="tabbed">Senior Studio</p>
+      <!-- <p class="tabbed">
         She's got a smile that it seems to me Reminds me of childhood memories Where everything was
         as fresh as the bright blue sky Now and then when I see her face She takes me away to that
         special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
@@ -23,17 +26,20 @@
         rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
         of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
         mine Whoa, oh, oh, oh
-      </p>
+      </p> -->
+    </div>
+    <div class="rectangle">
+      <p class="textCenter">Coming Soon!</p>
     </div>
     <!-- 4 images underneath -->
-    <div class="images">
+    <!-- <div class="images">
       <img v-for="i in 22" :key="i" :src="i % 2 === 0 ? HeadShot2 : HeadShot" alt="Gallery Image" />
-    </div>
+    </div> -->
 
     <!-- Text -->
     <div class="text">
-      <p class="tabbed">Senior Studio</p>
-      <p class="tabbed">
+      <p class="tabbed">Drawing</p>
+      <!-- <p class="tabbed">
         She's got a smile that it seems to me Reminds me of childhood memories Where everything was
         as fresh as the bright blue sky Now and then when I see her face She takes me away to that
         special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
@@ -43,7 +49,7 @@
         rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
         of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
         mine Whoa, oh, oh, oh
-      </p>
+      </p> -->
     </div>
   </div>
 </template>
@@ -54,6 +60,20 @@ import HeadShot2 from '@/assets/Glacier.png';
 </script>
 
 <style scoped>
+.rectangle {
+  width: 100%;
+  min-height: 30vh;
+  max-height: 350px;
+  background-color: #fff7fa;
+  border: 2px solid #ef91b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 1rem;
+}
 .images {
   display: grid;
   grid-auto-flow: column;
@@ -126,6 +146,11 @@ import HeadShot2 from '@/assets/Glacier.png';
   line-height: 1.6;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
+}
+.textCenter {
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 .tabbed {
   text-indent: 2em;
