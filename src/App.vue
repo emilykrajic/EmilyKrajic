@@ -165,8 +165,9 @@ onUnmounted(() => {
   font-size: 1rem;
   padding: 0.75rem 4rem;
   text-align: center;
-  color: #fbd3e1;
   background: none;
+  text-decoration: none;
+  color: #ef91b5;
   border: none;
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s;
@@ -175,11 +176,11 @@ onUnmounted(() => {
 
 .tab:hover {
   background-color: #fceaf0;
-  color: #ef91b5;
+  color: rgb(255, 108, 164);
 }
 
 .tab.active {
-  color: #ef91b5;
+  color: rgb(255, 108, 164);
   background-color: #fceaf0;
 }
 
