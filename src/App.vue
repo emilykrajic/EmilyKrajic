@@ -128,6 +128,8 @@ onUnmounted(() => {
   display: block;
 }
 .drawer-footer {
+  position: sticky;
+  bottom: 0;
   margin-top: auto;
   padding-left: 3rem;
   text-align: center;
@@ -314,6 +316,11 @@ footer.footer {
     min-width: 30px;
     padding: 0.5rem;
     font-size: 0.85rem;
+  }
+}
+@media (max-height: 600px) {
+  .DrawerPic {
+    max-height: 18vh;
   }
 }
 </style>
