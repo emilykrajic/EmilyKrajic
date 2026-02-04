@@ -30,51 +30,95 @@
     </div>
     <!-- 4 images underneath -->
     <div class="images">
-      <img v-for="i in 22" :key="i" :src="i % 2 === 0 ? HeadShot2 : HeadShot" alt="Gallery Image" />
+      <img
+        v-for="(img, index) in cycleImages"
+        :key="index"
+        :src="img"
+        :alt="`Cycle image ${index + 1}`"
+        loading="lazy"
+      />
     </div>
 
     <!-- Text -->
     <div class="text">
       <p class="tabbed">
-        She's got a smile that it seems to me Reminds me of childhood memories Where everything was
-        as fresh as the bright blue sky Now and then when I see her face She takes me away to that
-        special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
-        child o' mine Whoa, oh, oh, oh Sweet love of mine She's got eyes of the bluest skies As if
-        they thought of rain I'd hate to look into those eyes and see an ounce of pain Her hair
-        reminds me of a warm, safe place Where as a child I'd hide And pray for the thunder and the
-        rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
-        of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
-        mine Whoa, oh, oh, oh Sweet child o' mine Ooh, yeah Ooh, sweet love of mine Where do we go?
-        Where do we go now? Where do we go? Ooh, oh, where do we go? Where do we go now? Oh, where
-        do we go now? Where do we go? (Sweet child) Where do we go now? Ay, ay, ay, ay, ay, ay, ay,
-        ay Where do we go now? Ah, ah Where do we go? Oh, where do we go now? Oh, where do we go?
-        Oh, where do we go now? Where do we go? Oh, where do we go now? Now, now, now, now, now,
-        now, now Sweet child Sweet child of mine
+        This collection was created entirely from upcycled materials, with a focus on reimagining
+        garments that already had a past. I enjoy the challenge and creativity involved in
+        transforming something worn or forgotten into something new and wearable. My favorite piece
+        in the collection is the blue ruffled romper. I was drawn to the contrast between the stiff
+        denim fabric and the soft, playful movement of the ruffles. The body of the romper was
+        constructed from a pair of old jeans, while the ruffles were made using leftover denim
+        scraps, allowing nothing to go to waste. Another favorite look from the collection is the
+        black-and-white shorts and top set, which was designed from a single pair of pants. This
+        piece highlights how one garment can be completely reworked into multiple forms. Overall,
+        this collection demonstrates the versatility of clothing and the many possibilities that
+        exist through upcycling.
       </p>
+    </div>
+    <div class="hero">
+      <img :src="MoodBoard2" alt="MoodBoard2" />
+    </div>
+
+    <div class="text">
       <p class="tabbed">
-        She's got a smile that it seems to me Reminds me of childhood memories Where everything was
-        as fresh as the bright blue sky Now and then when I see her face She takes me away to that
-        special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
-        child o' mine Whoa, oh, oh, oh Sweet love of mine She's got eyes of the bluest skies As if
-        they thought of rain I'd hate to look into those eyes and see an ounce of pain Her hair
-        reminds me of a warm, safe place Where as a child I'd hide And pray for the thunder and the
-        rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
-        of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
-        mine Whoa, oh, oh, oh Sweet child o' mine Ooh, yeah Ooh, sweet love of mine Where do we go?
-        Where do we go now? Where do we go? Ooh, oh, where do we go? Where do we go now? Oh, where
-        do we go now? Where do we go? (Sweet child) Where do we go now? Ay, ay, ay, ay, ay, ay, ay,
-        ay Where do we go now? Ah, ah Where do we go? Oh, where do we go now? Oh, where do we go?
-        Oh, where do we go now? Where do we go? Oh, where do we go now? Now, now, now, now, now,
-        now, now Sweet child Sweet child of mine
+        My next collection, Nurture Nature, explores the relationship between clothing waste and its
+        impact on the environment. The collection focuses on transforming upcycled and secondhand
+        materials into garments that reflect different elements of the natural world. In this work,
+        discarded clothing becomes a symbol of environmental deterioration caused by fashion waste.
+        Each piece is designed to resemble organic forms found in nature, including soil, ocean
+        foam, sunlight, and clouds. I plan to use materials such as lace and recycled cotton, along
+        with free-motion embroidery, to create texture, movement, and depth within the garments.
+        Through Nurture Nature, I aim to present a more fashion-forward approach to sustainability,
+        highlighting how environmental awareness and innovative design can coexist.
+      </p>
+    </div>
+    <!-- 4 images underneath -->
+    <div class="rectangle">
+      <p class="textCenter">Coming Soon!</p>
+    </div>
+
+    <!-- Text -->
+    <div class="text">
+      <p class="tabbed">
+        My next collection, Nurture Nature, explores the relationship between clothing waste and its
+        impact on the environment. The collection is currently in its early stages, with an emphasis
+        on sourcing materials rather than construction. I am gathering secondhand fabrics from
+        thrift stores, my personal closet, donated garments, and clothing from others. These used
+        materials symbolize the growing impact of fashion waste on the environment. Once developed,
+        the collection will transform these upcycled textiles into fashion-forward pieces inspired
+        by natural elements such as soil, ocean foam, sunlight, and clouds. I plan to incorporate
+        lace, recycled cotton, and free-motion embroidery to create texture and organic forms.
+        Through Nurture Nature, the collection aims to highlight sustainability while pushing
+        creative and conceptual fashion design.
       </p>
     </div>
   </div>
 </template>
 
 <script setup>
-import HeadShot from '@/assets/Zion.png';
-import MoodBoard from '@/assets/MoodBoard.png';
-import HeadShot2 from '@/assets/Glacier.png';
+import MoodBoard from '../assets/MoodBoard.png';
+import MoodBoard2 from '../assets/MoodBoard2.png';
+import HeadShot from '../assets/Zion.png';
+import HeadShot2 from '../assets/Glacier.png';
+
+// List of filenames
+const imageFiles = [
+  'IMG_7528.JPG',
+  'IMG_7557.JPG',
+  'IMG_7636.JPG',
+  'IMG_7665.JPG',
+  'IMG_7596.JPG',
+  'IMG_7637.JPG',
+  'IMG_7657.JPG',
+  'IMG_7567.JPG',
+  'IMG_7532.JPG',
+  'IMG_7634.JPG',
+
+  'IMG_7543.JPG',
+];
+
+// Dynamically build full URLs
+const cycleImages = imageFiles.map((file) => new URL(`../assets/${file}`, import.meta.url).href);
 </script>
 
 <style scoped>
@@ -92,6 +136,20 @@ import HeadShot2 from '@/assets/Glacier.png';
   scrollbar-width: none;
   border-radius: 0;
   border: 5px solid #ef91b5;
+}
+.rectangle {
+  width: 100%;
+  min-height: 30vh;
+  max-height: 350px;
+  background-color: #fff7fa;
+  border: 2px solid #ef91b5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 1rem;
 }
 
 .images img {
@@ -163,7 +221,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   width: 100%;
   margin: 0;
   text-align: left;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
   line-height: 1.6;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;

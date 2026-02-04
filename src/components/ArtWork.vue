@@ -15,7 +15,6 @@
       />
     </div> -->
     <div class="text">
-      <p class="tabbed">Senior Studio</p>
       <!-- <p class="tabbed">
         She's got a smile that it seems to me Reminds me of childhood memories Where everything was
         as fresh as the bright blue sky Now and then when I see her face She takes me away to that
@@ -28,9 +27,9 @@
         mine Whoa, oh, oh, oh
       </p> -->
     </div>
-    <div class="rectangle">
+    <!-- <div class="rectangle">
       <p class="textCenter">Coming Soon!</p>
-    </div>
+    </div> -->
     <!-- 4 images underneath -->
     <!-- <div class="images">
       <img v-for="i in 22" :key="i" :src="i % 2 === 0 ? HeadShot2 : HeadShot" alt="Gallery Image" />
@@ -38,7 +37,6 @@
 
     <!-- Text -->
     <div class="text">
-      <p class="tabbed">Drawing</p>
       <!-- <p class="tabbed">
         She's got a smile that it seems to me Reminds me of childhood memories Where everything was
         as fresh as the bright blue sky Now and then when I see her face She takes me away to that
@@ -142,7 +140,7 @@ import HeadShot2 from '@/assets/Glacier.png';
   width: 100%;
   margin: 0;
   text-align: left;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
   line-height: 1.6;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;

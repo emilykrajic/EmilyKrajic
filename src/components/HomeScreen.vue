@@ -59,7 +59,7 @@ import HeadShot2 from '@/assets/Glacier.png';
 }
 
 .text {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
   font-family: 'Roboto Condensed', sans-serif;
 }
 
