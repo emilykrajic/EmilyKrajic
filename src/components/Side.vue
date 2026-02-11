@@ -28,15 +28,9 @@
         responsibility.
       </p>
     </div>
-    <!-- 4 images underneath -->
-    <div class="images">
-      <img
-        v-for="(img, index) in cycleImages"
-        :key="index"
-        :src="img"
-        :alt="`Cycle image ${index + 1}`"
-        loading="lazy"
-      />
+
+    <div class="fashion-scroll">
+      <img :src="MoodBoard3" alt="Fashion1" />
     </div>
 
     <!-- Text -->
@@ -79,18 +73,7 @@
 
     <!-- Text -->
     <div class="text">
-      <p class="tabbed">
-        My next collection, Nurture Nature, explores the relationship between clothing waste and its
-        impact on the environment. The collection is currently in its early stages, with an emphasis
-        on sourcing materials rather than construction. I am gathering secondhand fabrics from
-        thrift stores, my personal closet, donated garments, and clothing from others. These used
-        materials symbolize the growing impact of fashion waste on the environment. Once developed,
-        the collection will transform these upcycled textiles into fashion-forward pieces inspired
-        by natural elements such as soil, ocean foam, sunlight, and clouds. I plan to incorporate
-        lace, recycled cotton, and free-motion embroidery to create texture and organic forms.
-        Through Nurture Nature, the collection aims to highlight sustainability while pushing
-        creative and conceptual fashion design.
-      </p>
+      <p class="tabbed"></p>
     </div>
   </div>
 </template>
@@ -100,9 +83,11 @@ import MoodBoard from '../assets/MoodBoard.png';
 import MoodBoard2 from '../assets/MoodBoard2.png';
 import HeadShot from '../assets/Zion.png';
 import HeadShot2 from '../assets/Glacier.png';
-
+import MoodBoard3 from '../assets/Fashion1.png';
 // List of filenames
 const imageFiles = [
+  // 'IMG_7711.JPG',
+
   'IMG_7528.JPG',
   'IMG_7557.JPG',
   'IMG_7636.JPG',
@@ -231,6 +216,30 @@ const cycleImages = imageFiles.map((file) => new URL(`../assets/${file}`, import
   margin-bottom: 1rem;
 }
 
+.fashion-scroll {
+  width: 800px;
+  height: 250px;
+  margin: 2rem auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 5px solid #ef91b5;
+}
+
+.fashion-scroll img {
+  height: 100%;
+  width: auto;
+  min-width: 1500px; /* MUST be larger than 800px */
+  display: block;
+  object-fit: cover;
+}
+
+/* hide scrollbar */
+.fashion-scroll::-webkit-scrollbar {
+  display: none;
+}
+.fashion-scroll {
+  scrollbar-width: none;
+}
 /* ------------------------------
    Mobile Layout
 ------------------------------- */
