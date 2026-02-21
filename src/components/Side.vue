@@ -217,26 +217,22 @@ const cycleImages = imageFiles.map((file) => new URL(`../assets/${file}`, import
 }
 
 .fashion-scroll {
-  width: 800px;
+  width: 100%;
   height: 250px;
-  margin: 2rem auto;
   overflow-x: auto;
   overflow-y: hidden;
   border: 5px solid #ef91b5;
+  box-sizing: border-box;
 }
 
 .fashion-scroll img {
   height: 100%;
   width: auto;
-  min-width: 1500px; /* MUST be larger than 800px */
+  min-width: 1500px;
   display: block;
   object-fit: cover;
 }
 
-/* hide scrollbar */
-.fashion-scroll::-webkit-scrollbar {
-  display: none;
-}
 .fashion-scroll {
   scrollbar-width: none;
 }
