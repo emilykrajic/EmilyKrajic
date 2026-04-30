@@ -2,39 +2,24 @@
   <header class="header"></header>
   <!-- Class One -->
   <div class="gallery">
-    <!-- Top main image -->
+    <img :src="StudioArt1" alt="Studio Art" class="studio-img" />
+    <div class="text">
+      <p class="tabbed">
+        In Drawing One, I created a piece inspired by the struggles of being a woman. These
+        challenges include societal pressures to conform to an “ideal” figure, as well as the
+        difficulty of choosing clothing that effectively conveys one’s identity and personal
+        message. For this assignment, which focused on developing an archipelago installation, I
+        expanded upon my still life drawing skills by creating multiple “islands,” each contributing
+        to the overall narrative. Through this arrangement, I aimed to visually communicate the
+        complexity and fragmentation of these experiences. Additionally, I designed the installation
+        to evoke the feeling of entering a woman’s personal space. By doing so, I sought to immerse
+        the viewer in an intimate environment that reflects both the internal and external pressures
+        women face.
+      </p>
+    </div>
     <div class="rectangle">
       <p class="textCenter">Coming Soon!</p>
     </div>
-    <!-- <div class="grid">
-      <img
-        v-for="i in 4"
-        :key="i"
-        :src="i % 2 === 0 ? HeadShot2 : HeadShot"
-        :alt="'HeadShot ' + i"
-      />
-    </div> -->
-    <div class="text">
-      <!-- <p class="tabbed">
-        She's got a smile that it seems to me Reminds me of childhood memories Where everything was
-        as fresh as the bright blue sky Now and then when I see her face She takes me away to that
-        special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
-        child o' mine Whoa, oh, oh, oh Sweet love of mine She's got eyes of the bluest skies As if
-        they thought of rain I'd hate to look into those eyes and see an ounce of pain Her hair
-        reminds me of a warm, safe place Where as a child I'd hide And pray for the thunder and the
-        rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
-        of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
-        mine Whoa, oh, oh, oh
-      </p> -->
-    </div>
-    <!-- <div class="rectangle">
-      <p class="textCenter">Coming Soon!</p>
-    </div> -->
-    <!-- 4 images underneath -->
-    <!-- <div class="images">
-      <img v-for="i in 22" :key="i" :src="i % 2 === 0 ? HeadShot2 : HeadShot" alt="Gallery Image" />
-    </div> -->
-
     <!-- Text -->
     <div class="text">
       <!-- <p class="tabbed">
@@ -53,8 +38,8 @@
 </template>
 
 <script setup>
-import HeadShot from '@/assets/Zion.png';
-import HeadShot2 from '@/assets/Glacier.png';
+import StudioArt1 from '@/assets/StudioArt1.png';
+import StudioArt2 from '@/assets/StudioArt1.png';
 </script>
 
 <style scoped>
@@ -63,14 +48,26 @@ import HeadShot2 from '@/assets/Glacier.png';
   min-height: 30vh;
   max-height: 350px;
   background-color: #fff7fa;
-  border: 2px solid #ef91b5;
+  border: 5px solid #ef91b5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
   padding: 1rem;
+}
+.studio-img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+  border: 5px solid #ef91b5;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+.studio-img::-webkit-scrollbar {
+  display: none;
 }
 .images {
   display: grid;
@@ -161,6 +158,10 @@ import HeadShot2 from '@/assets/Glacier.png';
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .studio-img {
+    width: 100%;
+    height: 400px;
   }
 
   .grid img {

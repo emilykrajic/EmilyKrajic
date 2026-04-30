@@ -1,11 +1,12 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeScreen from '../components/HomeScreen.vue'
+import HomeScreen from '../components/Home.vue'
 import Resume from '../components/Resume.vue'
-import ArtWork from '../components/ArtWork.vue'
-import SideProject from '../components/Side.vue'
+import Art from '../components/Studio.vue'
+import Fashion from '../components/Fashion.vue'
 import About from '../components/About.vue'
+import Showcases from '../components/Showcase.vue'
 
 const routes = [
   {
@@ -13,6 +14,12 @@ const routes = [
     name: 'home',
     component: HomeScreen,
     meta: { title: 'Home' }
+  },
+    {
+    path: '/showcases',
+    name: 'showcases',
+    component: Showcases,
+    meta: { title: 'Showcases' }
   },
   {
     path: '/resume',
@@ -23,14 +30,14 @@ const routes = [
   {
     path: '/art',
     name: 'art',
-    component: ArtWork,
+    component: Art,
     meta: { title: 'Studio Art' }
   },
   {
-    path: '/side',
-    name: 'side',
-    component: SideProject,
-    meta: { title: 'Upcycling Projects' }
+    path: '/fashion',
+    name: 'fashion',
+    component: Fashion,
+    meta: { title: 'Fashion Design' }
   },
   {
     path: '/about',

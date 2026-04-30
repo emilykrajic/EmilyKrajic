@@ -67,8 +67,9 @@ const route = useRoute();
 
 const tabs = [
   { name: 'home', label: 'Home' },
+  { name: 'showcases', label: 'Showcases' },
   { name: 'art', label: 'Art' },
-  { name: 'side', label: 'Upcycling' },
+  { name: 'fashion', label: 'Fashion' },
   { name: 'about', label: 'About' },
   { name: 'resume', label: 'Resume' },
 ];
@@ -167,15 +168,17 @@ onUnmounted(() => {
 .tab {
   font-family: 'DM Serif Text';
   font-weight: bold;
-  font-size: 1rem;
-  padding: 0.75rem 4rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 3rem;
   text-align: center;
   background: none;
   text-decoration: none;
   color: #ef91b5;
   border: none;
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   border-radius: 4px;
 }
 
@@ -268,7 +271,9 @@ button.hamburger {
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 .drawer-tab:hover {
