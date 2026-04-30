@@ -128,7 +128,7 @@ onBeforeUnmount(() => track.value?.removeEventListener('scroll', onScroll));
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   border: 5px solid #ef91b5;
-  height: 600px;
+  height: clamp(280px, 55vw, 600px); /* ← replaces height: 600px */
 }
 .carousel-track::-webkit-scrollbar {
   display: none;
