@@ -41,7 +41,7 @@
 <script setup>
 import StudioArt1 from '@/assets/StudioArt1.png';
 import StudioArt2 from '@/assets/StudioArt1.png';
-import Drawing from '@/assets/drawing.png';
+import Drawing from '@/assets/Drawing.png';
 </script>
 
 <style scoped>
