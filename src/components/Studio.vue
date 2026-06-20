@@ -18,21 +18,22 @@
       </p>
     </div>
     <div class="rectangle">
-      <p class="textCenter">Coming Soon!</p>
+      <img :src="Drawing" alt="Drawing" class="rectangle-img" />
     </div>
     <!-- Text -->
     <div class="text">
-      <!-- <p class="tabbed">
-        She's got a smile that it seems to me Reminds me of childhood memories Where everything was
-        as fresh as the bright blue sky Now and then when I see her face She takes me away to that
-        special place And if I stare too long, I'd probably break down and cry Whoa, oh, oh Sweet
-        child o' mine Whoa, oh, oh, oh Sweet love of mine She's got eyes of the bluest skies As if
-        they thought of rain I'd hate to look into those eyes and see an ounce of pain Her hair
-        reminds me of a warm, safe place Where as a child I'd hide And pray for the thunder and the
-        rain to quietly pass me by Whoa, oh, oh Sweet child o' mine Whoa whoa, oh, oh, oh Sweet love
-        of mine Whoa, yeah Whoa, oh, oh, oh Sweet child o' mine Whoa, oh, whoa, oh Sweet love of
-        mine Whoa, oh, oh, oh
-      </p> -->
+      <p class="tabbed">
+        This piece captures three women moving down the runway, rendered through energetic line work
+        and a mix of fabric, paper, and acrylic paint. I wanted the brushstrokes themselves to carry
+        the excitement of a runway show. Each loose, gestural line reflects the motion, confidence,
+        and electricity of the moment, as if the figures are caught mid stride rather than posed.
+        Layering fabric and paper into the paint added a tactile, almost collaged quality, echoing
+        the texture and construction of the garments themselves. I'm continually drawn to bright,
+        saturated color, and here it amplifies the energy of the scene, pushing the figures forward
+        with a sense of movement and spectacle. At roughly 4x4 feet, the large scale immerses the
+        viewer in the moment, making the energy of the runway feel immediate and larger than life.
+        Together, the linework, mixed media, and color work to translate the thrill of fashion week.
+      </p>
     </div>
   </div>
 </template>
@@ -40,21 +41,24 @@
 <script setup>
 import StudioArt1 from '@/assets/StudioArt1.png';
 import StudioArt2 from '@/assets/StudioArt1.png';
+import Drawing from '@/assets/drawing.png';
 </script>
 
 <style scoped>
 .rectangle {
   width: 100%;
-  min-height: 30vh;
-  max-height: 350px;
+  aspect-ratio: 1 / 1;
   background-color: #fff7fa;
   border: 5px solid #ef91b5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+}
+.rectangle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .studio-img {
   width: 100%;

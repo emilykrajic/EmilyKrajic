@@ -6,7 +6,7 @@
   <!-- Profile rectangle -->
   <div class="rectangle">
     <p class="bilbo-title">Emily Krajic</p>
-    <p class="text">Studio Artist and UI/UX Developer</p>
+    <p class="text">Fashion Designer and UI/UX Developer</p>
   </div>
 
   <!-- Scrolling gallery -->

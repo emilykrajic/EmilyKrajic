@@ -31,7 +31,7 @@
         Fabrics, where I gained practical knowledge of materials and customer-focused design. I am
         an adventurous and motivated learner who enjoys challenging myself with new tasks.
         Currently, I am seeking internships or opportunities to continue developing my skills and
-        further my career as a web developer.
+        further my career as a web developer and fashhion designer.
       </p>
     </div>
   </div>
